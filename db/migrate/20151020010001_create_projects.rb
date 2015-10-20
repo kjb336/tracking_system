@@ -1,10 +1,10 @@
 class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
-      t.text :title
-      t.date :date
+      t.string :title
+      t.datetime :proj_date
       t.text :description
-      t.text :project_manager
+      t.integer :pm_id
 
       t.timestamps null: false
     end
